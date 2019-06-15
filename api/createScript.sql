@@ -1,0 +1,27 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE IF NOT EXISTS recipes (
+  id      SERIAL PRIMARY KEY,
+  author  INTEGER REFERENCES users (id),
+  name    VARCHAR(100) NOT NULL,
+  source  VARCHAR(250)
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id      BIGSERIAL PRIMARY KEY,
+  name    VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS ingredients (
+  id      SERIAL PRIMARY KEY,
+  value   VARCHAR(250) NOT NULL,
+  recipe_id INTEGER REFERENCES recipes (id)
+);
+
+CREATE TABLE IF NOT EXISTS steps (
+  id      SERIAL PRIMARY KEY,
+  value   TEXT NOT NULL,
+  recipe_id INTEGER REFERENCES  recipes (id)
+)
+
+ROLLBACK;
