@@ -1,0 +1,12 @@
+# My First Meatloaf
+a:
+* 1 lb ground beef
+* 2 slices bread crumbed
+* 1/2 onion chopped fine
+* 1 tsp salt
+* 1/4 t pepper
+* 1 egg
+* 1/4 C chili sauce
+
+> Mix together and put in greased loaf pan. Bake 1 hour at 400 degrees.
++
