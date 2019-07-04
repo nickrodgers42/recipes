@@ -1,0 +1,7 @@
+.title {
+  font-family: var(--headerFont);
+  font-weight: 400;
+}
+.appbar {
+  background: var(--mainBrandColor) !important;
+}

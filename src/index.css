@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --mainBrandColor: #DA3E4D;
+  --lightShades: #F5F0F4;
+  --lightAccent: #DE9B8F;
+  --darkAccent: #99859E;
+  --darkShades: #3E455E;
+  --headerFont: 'Merriweather';
+  --bodyFont: 'Montserrat';
+} 
+
+/* .theme {
+  --mainBrandColor: #DA3E4D;
+  --lightShades: #F5F0F4;
+  --lightAccent: #DE9B8F;
+  --darkAccent: #99859E;
+  --darkShades: #3E455E;
+  
+
+} */
