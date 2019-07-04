@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const { Pool }= require('pg')
+const { Pool } = require('pg')
 
 const pool = new Pool();
 
@@ -67,7 +67,7 @@ const insertDirections = async (client, directions, recipeId) => {
   let count = 1
   let textArr = []
   for (const direction of directions) {
-    textArr.push('($' + count + ', $' + (count +1) + ', $' + (count + 2) + ')')
+    textArr.push('($' + count + ', $' + (count + 1) + ', $' + (count + 2) + ')')
     directionsQuery.values.push(direction, directions.indexOf(direction) + 1, recipeId)
     count += 3
   }
@@ -106,13 +106,13 @@ const insertRecipe = async (client, recipe) => {
 const main = async () => {
   const topPath = path.join(__dirname, '../greatGrandmasRecipes/')
   const recipes = []
-  const topDir = fs.readdirSync(topPath, {withFileTypes: true})
+  const topDir = fs.readdirSync(topPath, { withFileTypes: true })
   const client = await pool.connect()
   console.log('Reading recipes...')
   for (const subDir of topDir) {
     if (subDir.isDirectory()) {
       const subDirPath = path.join(topPath, subDir.name)
-      const subDirFiles = fs.readdirSync(subDirPath, {withFileTypes: true})
+      const subDirFiles = fs.readdirSync(subDirPath, { withFileTypes: true })
       for (const recipeFile of subDirFiles) {
         if (recipeFile.isFile()) {
           const recipePath = path.join(subDirPath, recipeFile.name)
