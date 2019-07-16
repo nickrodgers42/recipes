@@ -1,5 +1,8 @@
 BEGIN TRANSACTION;
 DROP TABLE ingredients, directions, recipes, users;
+DROP EXTENSION IF EXISTS pg_trgm;
+
+CREATE EXTENSION pg_trgm;
 
 CREATE TABLE IF NOT EXISTS users (
   id      BIGSERIAL PRIMARY KEY,

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css'
 import Home from './components/home'
+import SearchResults from './components/searchResults'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 
@@ -19,6 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Route exact path='/' component={Home} />
+        <Route path='/search' component={SearchResults} />
       </Router>
     </ThemeProvider>
   );
